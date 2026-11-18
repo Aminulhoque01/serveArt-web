@@ -1,16 +1,31 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  darkMode: "class",
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: { DEFAULT: "#1B75BC", dark: "#0F4C81" },
+        sun: { DEFAULT: "#F58A2E", dark: "#D66E14" },
+        navy: "#0E2A47",
+        ink: "#07121F",
+        mist: "#F2F7FB",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        sans: ["var(--font-body)"],
+      },
+      keyframes: {
+        marquee: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
+        float: {
+          "0%,100%": { transform: "translate(0,0) scale(1)" },
+          "50%": { transform: "translate(40px,-50px) scale(1.1)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 35s linear infinite",
+        float: "float 14s ease-in-out infinite",
       },
     },
   },
