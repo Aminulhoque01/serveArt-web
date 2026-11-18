@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import services from "./servicesSlice";
+import ui from "./uiSlice";
 
 export const store = configureStore({
-  reducer: { services },
+  reducer: { services, ui },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

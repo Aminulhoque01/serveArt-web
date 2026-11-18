@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import HeroBackground from "./HeroBackground";
 import HeroVisual from "./HeroVisual";
 import { services } from "@/data/services";
+import OpenConsult from "./OpenConsult";
 
 const line1 = ["Websites,", "apps", "and", "brands"];
 
@@ -93,13 +94,10 @@ export default function Hero() {
             transition={{ delay: 1.15, duration: 0.6 }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <Link
-              href="/#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-sun px-7 py-3.5 font-semibold text-white shadow-lg shadow-sun/30 transition hover:bg-sun-dark"
-            >
+            <OpenConsult className="group inline-flex items-center gap-2 rounded-full bg-sun px-7 py-3.5 font-semibold text-white shadow-lg shadow-sun/30 transition hover:bg-sun-dark">
               Start a project
               <ArrowRight size={18} className="transition group-hover:translate-x-1" />
-            </Link>
+            </OpenConsult>
             <Link
               href="/#services"
               className="rounded-full border border-navy/20 px-7 py-3.5 font-semibold transition hover:border-brand hover:text-brand dark:border-white/25"

@@ -1,4 +1,5 @@
 "use client";
+import OpenConsult from "./OpenConsult";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -45,12 +46,12 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Link
-            href="/#contact"
-            className="hidden rounded-full bg-sun px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sun-dark sm:block"
+          <OpenConsult
+            onClick={() => setOpen(false)}
+            className="mt-3 block w-full rounded-full bg-sun py-3 text-center font-semibold text-white"
           >
             Start a project
-          </Link>
+          </OpenConsult>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -74,13 +75,9 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/#contact"
-            onClick={() => setOpen(false)}
-            className="mt-3 block rounded-full bg-sun py-3 text-center font-semibold text-white"
-          >
+          <OpenConsult className="hidden rounded-full bg-sun px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sun-dark sm:block">
             Start a project
-          </Link>
+          </OpenConsult>
         </div>
       )}
     </header>

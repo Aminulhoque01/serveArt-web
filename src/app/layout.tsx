@@ -4,6 +4,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ConsultModal from "@/components/ConsultModal";
 
 const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           {children}
           <Footer />
+           <ConsultModal />
         </Providers>
       </body>
     </html>
