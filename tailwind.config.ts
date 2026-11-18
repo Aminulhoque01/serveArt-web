@@ -18,6 +18,7 @@ const config: Config = {
       },
       keyframes: {
         marquee: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
+        "marquee-reverse": { "0%": { transform: "translateX(-50%)" }, "100%": { transform: "translateX(0)" } },
         float: {
           "0%,100%": { transform: "translate(0,0) scale(1)" },
           "50%": { transform: "translate(40px,-50px) scale(1.1)" },
@@ -25,6 +26,7 @@ const config: Config = {
       },
       animation: {
         marquee: "marquee 35s linear infinite",
+        "marquee-reverse": "marquee-reverse 35s linear infinite",
         float: "float 14s ease-in-out infinite",
       },
     },
