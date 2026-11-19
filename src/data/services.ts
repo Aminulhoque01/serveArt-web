@@ -15,7 +15,7 @@ export const services: ServiceItem[] = [
     id: "web",
     title: "Web development",
     description: "Fast, secure and scalable websites and web apps, built to turn visitors into customers.",
-    points: ["Next.js and Node.js builds", "E-commerce and booking systems", "Admin dashboards and APIs"],
+    points: ["React Next.js and Node.js builds", " php laravel and angular", "E-commerce and booking systems", "Admin dashboards and APIs"],
     icon: Code,
     from: "#1B75BC",
     to: "#0F4C81",
